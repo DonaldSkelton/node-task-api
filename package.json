@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "jest --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": ["./tests/fixtures/testEnvironment"]
   },
   "keywords": [],
   "author": "",
@@ -23,6 +28,8 @@
     "validator": "^13.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }
